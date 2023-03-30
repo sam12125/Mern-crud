@@ -82,17 +82,6 @@ app.post("/insert", (req, res) => {
   });
 });
 
-app.get("/read", (req, res) => {
-  UserModel.find((err, data) => {
-    if (err) {
-      return res.status(500).send(err);
-    } else {
-      // console.log(data)
-      return res.status(200).send(data);
-    }
-  });
-});
-
 // http://localhost:5000/update?id=63d26b17fa449792eda1452c&name=xyz
 // http://localhost:5000/update?id=63d26b17fa449792eda1452c&marks=1
 
